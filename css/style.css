@@ -1,0 +1,274 @@
+body {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body .code {
+  width: 100%;
+  margin: 20px auto 0;
+  background-color: #ececec;
+  border-top: 5px solid #d6d6d6;
+}
+
+body .code code {
+  width: 100%;
+}
+
+.container div {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  min-height: 200px;
+  min-width: 150px;
+}
+
+.c1 {
+  color: #ddd;
+  background-color: #003476;
+}
+
+.c2 {
+  color: #ddd;
+  background-color: #0062d2;
+}
+
+.c3 {
+  color: #333;
+  background-color: #b4d2f7;
+}
+
+.c4 {
+  color: #333;
+  background-color: #d5dfef;
+}
+
+.c5 {
+  color: #333;
+  background-color: #dfe1e5;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.mostly .c1,
+.mostly .c2,
+.mostly .c3,
+.mostly .c4,
+.mostly .c5 {
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .mostly .c2,
+  .mostly .c3,
+  .mostly .c4,
+  .mostly .c5 {
+    width: 50%;
+  }
+}
+
+@media (min-width: 800px) {
+  .mostly {
+    /* Using 33.33%, doesn't always work right due to rounding */
+  }
+  .mostly .c1 {
+    width: 60%;
+  }
+  .mostly .c2 {
+    width: 40%;
+  }
+  .mostly .c3,
+  .mostly .c4 {
+    width: 33%;
+  }
+  .mostly .c5 {
+    width: 34%;
+  }
+}
+
+@media (min-width: 800px) {
+  .mostly .container {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.column .c1,
+.column .c2,
+.column .c3 {
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .column .c1 {
+    width: 60%;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .column .c2 {
+    width: 40%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .column .c3 {
+    width: 100%;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+}
+
+@media (min-width: 800px) {
+  .column .c2 {
+    width: 20%;
+  }
+  .column .c3 {
+    width: 20%;
+  }
+}
+
+.shifter .c1,
+.shifter .c2,
+.shifter .c3,
+.shifter .c4 {
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .shifter .c1 {
+    width: 25%;
+  }
+  .shifter .c4 {
+    width: 75%;
+  }
+}
+
+@media (min-width: 800px) {
+  .shifter .container {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.tweaks .c1 {
+  padding: 10px;
+  width: 100%;
+}
+
+@media (min-width: 500px) {
+  .tweaks .c1 {
+    padding: 20px;
+    font-size: 1.5em;
+  }
+}
+
+@media (min-width: 800px) {
+  .tweaks .c1 {
+    padding: 40px;
+    font-size: 2em;
+  }
+}
+
+.canvas .container {
+  display: block;
+}
+
+.canvas .c1,
+.canvas .c3 {
+  position: absolute;
+  width: 250px;
+  height: 100%;
+  /*
+          This is a trick to improve performance on newer versions of Chrome
+          #perfmatters
+        */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 0.4s ease-out;
+  transition: -webkit-transform 0.4s ease-out;
+  transition: transform 0.4s ease-out;
+  transition: transform 0.4s ease-out, -webkit-transform 0.4s ease-out;
+  z-index: 1;
+}
+
+.canvas .c1 {
+  /*
+        Using translate3d as a trick to improve performance on older versions of Chrome
+        See: http://aerotwist.com/blog/on-translate3d-and-layer-creation-hacks/
+        #perfmatters
+        */
+  -webkit-transform: translate(-250px, 0);
+  transform: translate(-250px, 0);
+}
+
+.canvas .c2 {
+  width: 100%;
+  position: absolute;
+}
+
+.canvas .c3 {
+  left: 100%;
+}
+
+.canvas .c1.open {
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+.canvas .c3.open {
+  -webkit-transform: translate(-250px, 0);
+  transform: translate(-250px, 0);
+}
+
+@media (min-width: 500px) {
+  .canvas {
+    /* If the screen is wider then 500px, use Flexbox */
+  }
+  .canvas .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+  }
+  .canvas .c1 {
+    position: relative;
+    -webkit-transition: none 0s ease-out;
+    transition: none 0s ease-out;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  .canvas .c2 {
+    position: static;
+  }
+}
+
+@media (min-width: 800px) {
+  .canvas body {
+    overflow-x: auto;
+  }
+  .canvas .c3 {
+    position: relative;
+    left: auto;
+    -webkit-transition: none 0s ease-out;
+    transition: none 0s ease-out;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+/*# sourceMappingURL=style.css.map */
