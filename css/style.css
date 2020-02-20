@@ -4,6 +4,7 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   overflow-x: hidden;
+  font-size: 16px;
 }
 
 body .code {
@@ -47,6 +48,15 @@ body .code code {
 .c5 {
   color: #333;
   background-color: #dfe1e5;
+}
+
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+img {
+  width: 100%;
 }
 
 .container {
@@ -270,5 +280,31 @@ body .code code {
     -webkit-transform: translate(0, 0);
     transform: translate(0, 0);
   }
+}
+
+.breakpoint {
+  margin: 0 auto;
+  width: 960px;
+}
+
+.breakpoint figure {
+  margin: 1em 0;
+}
+
+.breakpoint .wp-block-table table {
+  width: 100%;
+}
+
+.breakpoint .wp-block-separator {
+  background-color: #cccccc;
+  border: 0;
+  height: 1px;
+  margin-bottom: 1.5em;
+}
+
+.breakpoint .wp-block-table td,
+.breakpoint .wp-block-table th {
+  border: 1px solid #ededed;
+  padding: 8px 15px;
 }
 /*# sourceMappingURL=style.css.map */

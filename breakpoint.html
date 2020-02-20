@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>斷點設計</title>
+</head>
+
+<body>
+    <div class="breakpoint">
+        <figure class="wp-block-table">
+            <table class="">
+                <thead>
+                    <tr>
+                        <th>Device Category</th>
+                        <th>Breakpoint Width</th>
+                        <th>Device Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Mobile, portrait</strong></td>
+                        <td><code>320px</code></td>
+                        <td>iPhone SE</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><code>375px</code></td>
+                        <td>iPhone 6 to X</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><code>414px</code></td>
+                        <td>iPhone 8 Plus</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mobile, landscape</strong></td>
+                        <td><code>568px</code></td>
+                        <td>iPhone SE</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><code>667px</code></td>
+                        <td>iPhone 6 to 8</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><code>736px</code></td>
+                        <td>iPhone 8 Plus</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><code>812px</code></td>
+                        <td>iPhone X</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tablet, portrait</strong></td>
+                        <td><code>768px</code></td>
+                        <td>iPad Air, iPad Mini, iPad Pro 9″</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><code>834px</code></td>
+                        <td>iPad Pro 10″</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tablet, landscape</strong></td>
+                        <td><code>1024px</code></td>
+                        <td>iPad Air, iPad Mini, iPad Pro 9″</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><code>1024px</code></td>
+                        <td>iPad Pro 12″ (portrait)</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><code>1112px</code></td>
+                        <td>iPad Pro 10″</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Laptop displays</strong></td>
+                        <td><code>1366px</code></td>
+                        <td>HD laptops (768p)</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><code>1366px</code></td>
+                        <td>iPad Pro 12″ (landscape)</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><code>1440px</code></td>
+                        <td>13″ MacBook Pro (2x scaling)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Desktop displays</strong></td>
+                        <td><code>1680px</code></td>
+                        <td>13″ MacBook Pro (1.5x scaling)</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><code>1920px</code></td>
+                        <td>1080p displays</td>
+                    </tr>
+                </tbody>
+            </table>
+        </figure>
+        <div class="text">
+            <h2>Using min-width</h2>
+            <div class="code">
+                <pre>
+                    <code>
+// Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) { ... }
+    
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) { ... }
+    
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) { ... }
+    
+    // Extra large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) { ... }
+                    </code>
+                </pre>
+            </div>
+
+            <h2 style="margin-top: 30px;">Using max-width</h2>
+            <div class="code" >
+                <pre>
+                    <code>
+    @media (max-width: 575.98px) { ... }
+
+    // Small devices (landscape phones, less than 768px)
+    @media (max-width: 767.98px) { ... }
+                        
+    // Medium devices (tablets, less than 992px)
+    @media (max-width: 991.98px) { ... }
+                        
+    // Large devices (desktops, less than 1200px)
+    @media (max-width: 1199.98px) { ... }
+                    </code>
+                </pre>
+            </div>
+    
+        </div>
+
+    </div>
+   
+
+
+    <div class="wrapper">
+        <img src="./images/5dea8f2d247ca54ba4c97f47_Apple Device and App Store Screenshot Size Summary Dec 2019.png"
+            alt="">
+
+
+
+    </div>
+
+
+</body>
+
+</html>
