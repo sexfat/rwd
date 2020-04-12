@@ -59,6 +59,136 @@ img {
   width: 100%;
 }
 
+.margin-left-1 {
+  margin-left: 1px;
+}
+
+.margin-left-2 {
+  margin-left: 2px;
+}
+
+.margin-left-3 {
+  margin-left: 3px;
+}
+
+.margin-left-4 {
+  margin-left: 4px;
+}
+
+.margin-left-5 {
+  margin-left: 5px;
+}
+
+.margin-left-6 {
+  margin-left: 6px;
+}
+
+.margin-left-7 {
+  margin-left: 7px;
+}
+
+.margin-left-8 {
+  margin-left: 8px;
+}
+
+.margin-left-9 {
+  margin-left: 9px;
+}
+
+.margin-left-10 {
+  margin-left: 10px;
+}
+
+.margin-left-11 {
+  margin-left: 11px;
+}
+
+.margin-left-12 {
+  margin-left: 12px;
+}
+
+.margin-left-13 {
+  margin-left: 13px;
+}
+
+.margin-left-14 {
+  margin-left: 14px;
+}
+
+.margin-left-15 {
+  margin-left: 15px;
+}
+
+.margin-left-16 {
+  margin-left: 16px;
+}
+
+.margin-left-17 {
+  margin-left: 17px;
+}
+
+.margin-left-18 {
+  margin-left: 18px;
+}
+
+.margin-left-19 {
+  margin-left: 19px;
+}
+
+.margin-left-20 {
+  margin-left: 20px;
+}
+
+.margin-left-21 {
+  margin-left: 21px;
+}
+
+.margin-left-22 {
+  margin-left: 22px;
+}
+
+.margin-left-23 {
+  margin-left: 23px;
+}
+
+.margin-left-24 {
+  margin-left: 24px;
+}
+
+.margin-left-25 {
+  margin-left: 25px;
+}
+
+.margin-left-26 {
+  margin-left: 26px;
+}
+
+.margin-left-27 {
+  margin-left: 27px;
+}
+
+.margin-left-28 {
+  margin-left: 28px;
+}
+
+.margin-left-29 {
+  margin-left: 29px;
+}
+
+.margin-left-30 {
+  margin-left: 30px;
+}
+
+.w50 {
+  width: 50%;
+  margin: 0 auto;
+}
+
+h1 {
+  width: 100%;
+  text-align: center;
+}
+
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -306,5 +436,44 @@ img {
 .breakpoint .wp-block-table th {
   border: 1px solid #ededed;
   padding: 8px 15px;
+}
+
+.table {
+  border-collapse: collapse;
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #4f5d73;
+}
+
+.table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid;
+  border-bottom-color: #d8dbe0;
+}
+
+.table th, .table td {
+  padding: .75rem;
+  vertical-align: top;
+  border-top: 1px solid;
+  border-top-color: #d8dbe0;
+}
+
+th {
+  text-align: inherit;
+}
+
+@media (max-width: 1024px) {
+  .prioity_04 {
+    display: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .prioity_04, .prioity_03 {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */

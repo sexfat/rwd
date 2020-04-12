@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table RWD</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  
+    <div class="canvas">
+        <h1 class="margin-left-20">使用百分比當作寬度</h1>
+        <div class="container w50">  
+            <table class="table table-responsive-sm">
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Date registered</th>
+                        <th>Role</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Samppa Nori</td>
+                        <td>2012/01/01</td>
+                        <td>Member</td>
+                        <td><span class="badge badge-success">Active</span></td>
+                    </tr>
+                    <tr>
+                        <td>Estavan Lykos</td>
+                        <td>2012/02/01</td>
+                        <td>Staff</td>
+                        <td><span class="badge badge-danger">Banned</span></td>
+                    </tr>
+                    <tr>
+                        <td>Chetan Mohamed</td>
+                        <td>2012/02/01</td>
+                        <td>Admin</td>
+                        <td><span class="badge badge-secondary">Inactive</span></td>
+                    </tr>
+                    <tr>
+                        <td>Derick Maximinus</td>
+                        <td>2012/03/01</td>
+                        <td>Member</td>
+                        <td><span class="badge badge-warning">Pending</span></td>
+                    </tr>
+                    <tr>
+                        <td>Friderik Dávid</td>
+                        <td>2012/01/21</td>
+                        <td>Staff</td>
+                        <td><span class="badge badge-success">Active</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h1 class="margin-left-20">table隱藏欄位</h1>
+        <div class="container w50">  
+          
+            <table class="table table_responsive_hidden">
+                <thead>
+                    <tr>
+                        <th class="prioity_01">Username</th>
+                        <th class="prioity_02">Date registered</th>
+                        <th class="prioity_03">Role</th>
+                        <th class="prioity_04">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="prioity_01">Samppa Nori</td>
+                        <td class="prioity_02">2012/01/01</td>
+                        <td class="prioity_03">Member</td>
+                        <td class="prioity_04"><span class="badge badge-success">Active</span></td>
+                    </tr>
+                    <tr>
+                        <td class="prioity_01"> Estavan Lykos</td>
+                        <td class="prioity_02">2012/02/01</td>
+                        <td class="prioity_03">Staff</td>
+                        <td class="prioity_04"><span class="badge badge-danger">Banned</span></td>
+                    </tr>
+                    <tr>
+                        <td class="prioity_01">Chetan Mohamed</td>
+                        <td class="prioity_02">2012/02/01</td>
+                        <td class="prioity_03">Admin</td>
+                        <td class="prioity_04"><span class="badge badge-secondary">Inactive</span></td>
+                    </tr>
+                    <tr>
+                        <td class="prioity_01">Derick Maximinus</td>
+                        <td class="prioity_02">2012/03/01</td>
+                        <td class="prioity_03">Member</td>
+                        <td class="prioity_04"><span class="badge badge-warning">Pending</span></td>
+                    </tr>
+                    <tr>
+                        <td class="prioity_01">Friderik Dávid</td>
+                        <td class="prioity_02">2012/01/21</td>
+                        <td class="prioity_03">Staff</td>
+                        <td class="prioity_04"><span class="badge badge-success">Active</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- <div class="code">
+            <pre>
+          <code>  
+            body {
+              overflow-x: hidden;
+            }
+            
+            .container {
+              display: block;
+            }
+            
+            .c1, .c3 {
+              position: absolute;
+              width: 250px;
+              height: 100%;
+            
+              /*
+                This is a trick to improve performance on newer versions of Chrome
+                #perfmatters
+              */
+              -webkit-backface-visibility: hidden;
+              backface-visibility: hidden; 
+            
+              -webkit-transition: -webkit-transform 0.4s ease-out;
+              transition: transform 0.4s ease-out;
+            
+              z-index: 1;
+            }
+            
+            .c1 {
+              /*
+              Using translate3d as a trick to improve performance on older versions of Chrome
+              See: http://aerotwist.com/blog/on-translate3d-and-layer-creation-hacks/
+              #perfmatters
+              */
+              -webkit-transform: translate(-250px,0);
+              transform: translate(-250px,0);
+            }
+            
+            .c2 {
+              width: 100%;
+              position: absolute;
+            }
+            
+            .c3 {
+              left: 100%;
+            }
+            
+            .c1.open {
+              -webkit-transform: translate(0,0);
+              transform: translate(0,0);
+            }
+            
+            .c3.open {
+              -webkit-transform: translate(-250px,0);
+              transform: translate(-250px,0);
+            }
+            
+            @media (min-width: 500px) {
+              /* If the screen is wider then 500px, use Flexbox */
+              .container {
+                display: -webkit-flex;
+                display: flex;
+                -webkit-flex-flow: row nowrap;
+                flex-flow: row nowrap;
+              }
+              .c1 {
+                position: relative;
+                -webkit-transition: none 0s ease-out;
+                transition: none 0s ease-out;
+                -webkit-transform: translate(0,0);
+                transform: translate(0,0);
+              }
+              .c2 {
+                position: static;
+              }
+            }
+            
+            @media (min-width: 800px) {
+              body {
+                overflow-x: auto;
+              }
+              .c3 {
+                position: relative;
+                left: auto;
+                -webkit-transition: none 0s ease-out;
+                transition: none 0s ease-out;
+                -webkit-transform: translate(0,0);
+                transform: translate(0,0);
+              }
+            }
+          
+
+          </code>
+         </pre>
+        </div> -->
+
+
+
+
+    </div>
+
+</body>
+
+</html>
